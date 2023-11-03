@@ -93,6 +93,43 @@
     }
 </style>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Add this CSS to style the text */
+        a {
+            color: black;
+            text-decoration: none; /* Remove underline from the anchor text */
+        }
+
+        /* Add this CSS to create the rainbow text animation */
+        .rainbow-text {
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+            background-size: 200% 200%;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 200% 200%;
+            }
+        }
+
+        /* Add this CSS to apply the effect on mouseover */
+        .card:hover .rainbow-text {
+            animation: rainbow 0.5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
 <!-- Education Section-->
 <section>
     <h2 class="text-secondary fw-bolder mb-4">Education</h2>
@@ -106,7 +143,8 @@
                         <div class="bg-light p-4 rounded-4">
                             <div class="text-secondary fw-bolder mb-2">2023</div>
                             <div class="mb-2">
-                                <div class="small fw-bolder">Certified in Cybersecurity</div>
+                                <!-- Add the rainbow-text class to apply the effect -->
+                                <div class="small fw-bolder rainbow-text">Certified in Cybersecurity</div>
                                 <div class="small text-muted"></div>
                             </div>
                             <div class="fst-italic">
@@ -123,6 +161,9 @@
         </div>
     </a>
 </section>
+
+</body>
+</html>
 
 
 
