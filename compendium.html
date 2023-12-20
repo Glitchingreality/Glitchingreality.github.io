@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Compendium</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #212121;
+      color: #fff;
+      overflow: auto; /* "Hidden" overflow to prevent scrolling, "Auto" to show. */
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    main {
+      position: relative; /* Relative positioning for absolute positioning of the cow */
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #00bcd4;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 5px;
+    }
+
+    .tool {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #00bcd4;
+      border-radius: 5px;
+      background-color: #212121;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    code {
+      font-family: 'Fira Code', monospace;
+      background-color: #333;
+      color: #00bcd4;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    #cow {
+      position: absolute;
+      bottom: 0;
+      left: 0; /* Adjust the starting position to the left */
+      transform: scaleX(-1) scale(1.5); /* Flip horizontally and adjust the size of the cow */
+      transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
+    }
+
+    .flippable-text {
+      display: inline-block;
+      transform: scaleX(-1) scale(1.5); /* Flip horizontally and adjust the size of the text */
+      transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Cyber Security Compendium</h1>
+  </header>
+
+  <main>
+    <div class="tool">
+      <h2>Nmap</h2>
+      <p>Nmap is a powerful network scanning tool.</p>
+      <code>sudo nmap -sP 192.168.1.1</code>
+    </div>
+
+    <div class="tool">
+      <h2>Database Enumeration</h2>
+      <p>Tools = gobuster, smbclient, impacket (SQL).</p>
+      <code>gobuster dir -u 111.111.111.111 -w /usr/share/wordlists</code>
+<p>'dir' can be used to discover directories.</p>
+<br>
+<code>gobuster dns -d website.com -w /filepath/to/wordlist.txt</code>
+<p>'dns' can be used to discover sub domains</p>
+<h5>if no dns, try vhost or s3, add results to host file (etc/hosts) & navigate.</h5>    
+ -
+<br><br>
+       <code>smbclient -N -L 10.129.209.35</code>
+<h6>^Program - No Password - List Directories - IP</h6>
+<code>smbclient -N //10.129.209.35/backups</code>
+<h6>in the above example: backups is a directory.</h6>
+<br>-
+<p>impacket</p>
+<code>sudo python3 mssqlclient.py Archtype/sql-svc:pw@ 10.129.56.210 -windows-auth</code>
+<h6>privledge(sudo) - dependancy(python3) - script(mssqlclient) - username(archtype) - password - target - specification</h6>
+-<br><br>
+SQL > xp-commandshell "powershell -c cd C:\; ls"
+<h6>ls represpents the command passed to powershell, in this case; listing files. </h6>
+        C:users/public; can be written to > wget
+
+
+
+
+
+
+
+
+</div>
+
+    <div class="tool">
+      <h2>FTP</h2>
+      <p>Try username: Anonymous<br>Any Password</p>
+        <code>ftp 10.129.122.148</code><br>ls or dir to list files - get to download them</code>
+
+
+    </div>
+ <div class="tool">
+      <h2>Vim + Shell</h2>
+      <p>"Stabilize" shell</p>
+        <code>python3 -c 'import pty;pty.spawn("/bin/bash")'</code><br>cntrl+z - (backgrounds the shell)
+   <br>  <code>tty raw -echo && fg <br>chmod +x filename</code> - (makes file executable)
+    </div>
+
+
+ <div class="tool">
+      <h2>Help</h2>
+      <p>Domain not display in Browser? > Edit the Host File > Map ip to domain.<br></p>
+     <code>sudo vi /etc/hosts</code> > add site ip & domain name.<br>
+    </div>
+
+
+    <div class="tool">
+      <h2>Processes</h2>
+      <code>ps aux</code><p>  list processes</p>
+<code>pkill</code><p> kill process</p>
+
+
+    </div>
+    <!-- Add more tools as needed -->
+
+  </main>
+
+  <!-- ASCII art cow -->
+  <pre id="cow">
+   __________________
+  <span class="flippable-text">I'm a friendly cow!</span>
+   ------------------
+          \   ^__^
+           \  (oo)\_______
+              (__)\       )\/\
+                  ||----w |
+                  ||     ||
+  </pre>
+
+  <script>
+    // JavaScript to make the cow and flippable text wander around
+    const cow = document.getElementById('cow');
+    const flippableText = document.querySelector('.flippable-text');
+    let direction = 1; // 1 for right, -1 for left
+
+    function wander() {
+      const position = parseInt(getComputedStyle(cow).left, 10);
+      const screenWidth = window.innerWidth;
+
+      if (position > screenWidth - cow.clientWidth || position < 0) {
+        // Flip the cow and flippable text horizontally when reaching edges
+        cow.style.transform = `scaleX(${direction})`;
+        flippableText.style.transform = `scaleX(${direction})`;
+        direction *= -1; // Change direction after flipping
+      }
+
+      cow.style.left = position + direction + 'px';
+      flippableText.style.left = position + direction + 'px';
+      requestAnimationFrame(wander);
+    }
+
+    wander(); // Start the wandering
+  </script>
+</body>
+
+</html>
