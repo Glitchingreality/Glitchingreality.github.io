@@ -1,6 +1,6 @@
 ---
 title: "Coming Soon"
-date: "2024/0/0"
+date: "2024/04/06"
 author: "Chance Bowers"
 ---
 
