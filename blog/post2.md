@@ -13,4 +13,4 @@ New Stories Coming 'Soon'
 *Thank you for reading!*
 
 
-[Home](https://glitchingrality.github.io)
+[Home](https://glitchingrality.github.io/index.html)

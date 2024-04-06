@@ -29,4 +29,4 @@ And while it may be disheartening to see these trillion-dollar companies remain 
 *Thank you for reading!*
 
 
-[Home](https://glitchingrality.github.io)
+[Home](https://glitchingrality.github.io/index.html)
