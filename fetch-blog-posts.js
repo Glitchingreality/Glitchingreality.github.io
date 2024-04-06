@@ -41,7 +41,7 @@
 
     <script>
         // Fetch blog posts from GitHub repository
-        fetch('https://api.github.com/repos/glitchingreality/blog/contents/posts1.md')
+        fetch('https://api.github.com/repos/glitchingreality/glitchingreality.github.io/contents/blog/posts1.md')
           .then(response => response.json())
           .then(posts => {
             // Filter out non-Markdown files
