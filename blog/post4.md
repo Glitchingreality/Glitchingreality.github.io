@@ -21,6 +21,7 @@ Stealth protocol uses Stunnel, an open-source library, to wrap your regular VPN 
 Keep in mind though, the extra layer of encryption and decryption that comes with Stealth can impact the VPN performance so internet speeds might slow down. It's recommended to only use Stealth when you can't use any of the other protocols to connect to the VPN.
 
 To my amusement, it actually worked and I was able to connect through my remote client to my PC at home! A great success and an interesting lesson learned. A true testament to the power of curiosity and willingness to experiment with different protocols. 
+
 ---
 
 *Thank you for reading!*
