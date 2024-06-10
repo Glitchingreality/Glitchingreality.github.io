@@ -1,6 +1,6 @@
 ---
 title: " Bypassing aviation firewalls by disguising packets."
-date: "06/10/2024"
+date: "2024/06/10"
 author: "Chance Bowers"
 ---
 
