@@ -1,5 +1,5 @@
 ___
-title: " Bypassing aviation firewalls by disguising packets."
+
 date: "2024/06/10"
 ***author: "Chance Bowers"***
 ___
