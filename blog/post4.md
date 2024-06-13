@@ -1,8 +1,8 @@
 ___
 
 date: "2024/06/10"
-***author: "Chance Bowers"***
-___
+author: ***"Chance Bowers"***
+
 
 # Bypassing aviation firewalls by disguising packets.
 

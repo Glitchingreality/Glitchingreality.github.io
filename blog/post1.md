@@ -1,8 +1,8 @@
 ---
-title: "Bypassing a Trillion Dollar Companies Restrictions with a Single Click"
+
 date: "2024-04-06"
-author: "Chance Bowers"
----
+author: ***"Chance Bowers"***
+
 
 # Bypassing Trillion Dollar Company Restrictions with a Single Click
 
