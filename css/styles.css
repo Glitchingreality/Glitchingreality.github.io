@@ -11723,4 +11723,48 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+/* Hard lock the carousel size */
+.carousel-container {
+    width: 800px;
+    height: 620px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Anchor the carousel */
+#pcBuildCarousel {
+    height: 100%;
+}
+
+/* Stop Bootstrap from resizing height */
+#pcBuildCarousel .carousel-inner {
+    position: relative;
+    height: 100%;
+}
+
+/* Remove items from layout flow */
+#pcBuildCarousel .carousel-item {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+}
+
+/* Only show the active slide */
+#pcBuildCarousel .carousel-item.active {
+    position: relative;
+}
+
+/* Image behavior */
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-container {
+    outline: 3px solid red;
+}
+
+
 }
